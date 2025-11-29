@@ -1,0 +1,32 @@
+<DashboardScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 20
+
+        Label:
+            text: "Home Device Control"
+            font_size: 32
+            color: 1,1,1,1
+            size_hint_y: None
+            height: 80
+
+        Button:
+            id: light_btn
+            text: "Light: " + root.light_status
+            font_size: 24
+            size_hint_y: None
+            height: 70
+            background_normal: ""
+            background_color: (0.1, 0.6, 0.9, 1)
+            on_release: root.toggle_light()
+
+        Button:
+            id: fan_btn
+            text: "Fan: " + root.fan_status
+            font_size: 24
+            size_hint_y: None
+            height: 70
+            background_normal: ""
+            background_color: (0.2, 0.7, 0.4, 1)
+            on_release: root.toggle_fan()
